@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nourhene HAMDENE – Dossier de compétences</title>
+<meta name="description" content="Dossier de compétences de Nourhene HAMDENE, Ingénieure IA : IA générative, agents IA, vision par ordinateur et data.">
+<style>
+  :root{
+    --primary:#1A365D;
+    --accent:#2B6CB0;
+    --accent-soft:#EBF4FF;
+    --text:#2D3748;
+    --muted:#5A6B82;
+    --line:#D9E2EC;
+    --bg:#F7F9FC;
+    --card:#FFFFFF;
+    --highlight:#FFF8E1;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--text);background:var(--bg);line-height:1.55;font-size:16px}
+  a{color:var(--accent)}
+  .wrap{max-width:960px;margin:0 auto;padding:0 16px}
+
+  /* Navigation */
+  nav{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line);backdrop-filter:blur(6px)}
+  nav .wrap{display:flex;gap:4px;overflow-x:auto;white-space:nowrap;padding-top:8px;padding-bottom:8px}
+  nav a{text-decoration:none;color:var(--primary);font-weight:600;font-size:14px;padding:6px 10px;border-radius:6px}
+  nav a:hover{background:var(--accent-soft)}
+
+  /* En-tête */
+  header{background:linear-gradient(135deg,var(--primary),var(--accent));color:#fff;padding:40px 0 36px}
+  header .wrap{display:flex;gap:28px;align-items:center;flex-wrap:wrap}
+  header img{width:132px;height:132px;border-radius:50%;object-fit:cover;border:4px solid rgba(255,255,255,.85)}
+  header h1{margin:0;font-size:34px;letter-spacing:.3px}
+  header .titre{margin:4px 0 12px;font-size:19px;font-style:italic;opacity:.95}
+  header .infos{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:14px;opacity:.95}
+  header .infos a{color:#fff}
+  .btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+  .btn{display:inline-block;padding:9px 16px;border-radius:8px;font-weight:600;font-size:14px;text-decoration:none}
+  .btn-light{background:#fff;color:var(--primary)}
+  .btn-ghost{border:1.5px solid rgba(255,255,255,.8);color:#fff}
+
+  /* Sections */
+  section{padding:28px 0 4px;scroll-margin-top:60px}
+  h2{color:var(--primary);font-size:21px;text-transform:uppercase;letter-spacing:.6px;margin:0 0 16px;padding-bottom:6px;border-bottom:3px solid var(--accent)}
+  .profil{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px}
+
+  /* Cartes d'expérience */
+  .exp{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px 22px 18px;margin-bottom:22px;scroll-margin-top:64px;transition:box-shadow .3s,border-color .3s}
+  .exp:target{border-color:var(--accent);box-shadow:0 0 0 4px rgba(43,108,176,.18)}
+  .exp-head{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+  .exp h3{margin:0;color:var(--primary);font-size:20px}
+  .entreprise{color:var(--accent);font-style:italic;font-weight:600;margin-top:2px}
+  .dates{text-align:right;font-weight:700;color:var(--primary);font-size:15px}
+  .lieu{font-style:italic;color:var(--muted);font-weight:400;font-size:14px}
+  .contexte{color:var(--muted);margin:10px 0 4px;font-size:15px}
+
+  .chiffres{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0 4px}
+  .chiffre{background:var(--accent-soft);border-radius:10px;padding:8px 14px;min-width:120px}
+  .chiffre b{display:block;font-size:20px;color:var(--primary)}
+  .chiffre span{font-size:13px;color:var(--muted)}
+
+  .projet{border-top:1px dashed var(--line);margin-top:16px;padding-top:14px}
+  .projet h4{margin:0 0 4px;font-size:17px;color:var(--primary)}
+  .projet .ctx{margin:0 0 8px;color:var(--muted);font-style:italic;font-size:15px}
+  .label{font-weight:700;color:var(--primary);font-size:14px;text-transform:uppercase;letter-spacing:.4px;margin:10px 0 4px}
+  .projet ul{margin:4px 0 0;padding-left:20px}
+  .projet li{margin:3px 0}
+  .stack{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+  .tag{background:#EDF2F7;color:var(--primary);border-radius:999px;padding:3px 11px;font-size:13px;font-weight:600}
+  .iatags{display:flex;flex-wrap:wrap;gap:6px;margin:4px 0 8px}
+  .iatag{background:#1A365D;color:#fff;border-radius:6px;padding:2px 9px;font-size:12px;font-weight:700;letter-spacing:.2px}
+  .badge{display:inline-block;background:#E6FFFA;color:#22543D;border:1px solid #9AE6B4;border-radius:999px;padding:2px 10px;font-size:13px;font-weight:700;margin-left:6px;vertical-align:middle}
+
+  /* Projets académiques */
+  .grille{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:16px}
+  .carte{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;scroll-margin-top:64px}
+  .carte h4{margin:0 0 2px;color:var(--primary)}
+  .carte-large{grid-column:1/-1;border-left:4px solid var(--accent);padding:20px 22px}
+  .carte-large h4{font-size:18px}
+  .carte-large ul{margin:4px 0 6px;padding-left:20px}
+  .carte-large li{margin:3px 0}
+  .ctx-rag{margin:4px 0 6px;color:var(--muted);font-style:italic;font-size:15px}
+  .carte .meta{font-size:13px;color:var(--muted);margin-bottom:8px}
+
+  /* Compétences */
+  .comp{display:grid;grid-template-columns:repeat(auto-fit,minmax(380px,1fr));gap:16px}
+  .comp .carte h4{margin-bottom:10px}
+  .ligne{display:flex;align-items:baseline;gap:10px;margin:6px 0}
+  .sous{flex:0 0 110px;font-size:12px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.3px}
+  .ligne .stack{margin-top:0}
+  .usage{font-size:12.5px;color:var(--muted);font-style:italic;margin-bottom:8px}
+
+  /* Formation */
+  .form-item{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 16px;margin-bottom:10px}
+  .form-item b{color:var(--primary)}
+
+  footer{text-align:center;color:var(--muted);font-size:13px;padding:30px 16px 40px}
+  .haut{position:fixed;right:16px;bottom:16px;background:var(--primary);color:#fff;text-decoration:none;width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:20px;box-shadow:0 2px 8px rgba(0,0,0,.2)}
+
+  @media (max-width:600px){
+    .comp,.grille{grid-template-columns:1fr}
+    header h1{font-size:27px}
+    header .titre{font-size:16px}
+    .dates{text-align:left}
+    .exp{padding:18px 16px 14px}
+  }
+  @media print{
+    nav,.haut,.btns{display:none}
+    body{background:#fff}
+    header{background:none;color:var(--text);padding:10px 0}
+    header .infos a{color:var(--accent)}
+    .exp,.carte{break-inside:avoid}
+  }
+</style>
+</head>
+<body>
+
+<nav aria-label="Sommaire">
+  <div class="wrap">
+    <a href="#profil">Profil</a>
+    <a href="#sogeti">Sogeti / Capgemini</a>
+    <a href="#ayming">Ayming</a>
+    <a href="#envast">ENVAST</a>
+    <a href="#projets">Projets</a>
+    <a href="#competences">Compétences</a>
+    <a href="#formation">Formation</a>
+    <a href="#langues">Langues</a>
+  </div>
+</nav>
+
+<header>
+  <div class="wrap">
+    <img src="photo-web.jpg" alt="Photo de Nourhene HAMDENE">
+    <div>
+      <h1>Nourhene HAMDENE</h1>
+      <div class="titre">Ingénieure IA &amp; Data Science</div>
+      <div class="infos">
+        <span>✉ <a href="mailto:hamdenenou@gmail.com">hamdenenou@gmail.com</a></span>
+        <span>📍 Paris, mobile sur toute la France</span>
+        <span>📅 Disponible immédiatement</span>
+      </div>
+      <div class="btns">
+        <a class="btn btn-light" href="CV_Nourhene_HAMDENE.pdf" download>⬇ Télécharger le CV (PDF)</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- PROFIL -->
+  <section id="profil">
+    <h2>Profil</h2>
+    <div class="profil">
+      Ingénieure IA, titulaire d'un diplôme d'ingénieur en génie informatique (spécialité IA) et d'un Master de Recherche en Data Science &amp; Machine Learning. J'ai travaillé sur des projets de Machine Learning, de Deep Learning et d'IA générative (LLMs, agents IA), de la R&amp;D jusqu'aux applications concrètes. J'interviens sur les principales étapes d'un projet IA.<br>J'aime comprendre un besoin métier, comparer les approches possibles et choisir la solution la plus adaptée. Autonome, curieuse et pédagogue, je souhaite contribuer à des projets IA à impact concret.    </div>
+  </section>
+
+  <!-- EXPÉRIENCES -->
+  <section id="experiences" style="padding-bottom:0">
+    <h2>Expériences professionnelles</h2>
+  </section>
+
+  <!-- SOGETI -->
+  <article class="exp" id="sogeti">
+    <div class="exp-head">
+      <div>
+        <h3>Ingénieure R&amp;D en IA &amp; Data Science</h3>
+        <div class="entreprise">SOGETI part of CAPGEMINI (ESN)</div>
+      </div>
+      <div class="dates">10/2025 – 02/2026<br><span class="lieu">Issy-les-Moulineaux, France</span></div>
+    </div>
+    <p class="contexte">Le travail sur deux projets d'innovation interne pour l'accessibilité web des personnes déficientes visuelles.</p>
+
+    <div class="projet" id="smartnavigate">
+      <h4>Projet : SmartNavigate, agent web vocal pour personnes malvoyantes</h4>
+      <span class="iatags"><span class="iatag">IA agentique</span><span class="iatag">LLM</span><span class="iatag">Multi-agents</span><span class="iatag">IA vocale</span></span>
+      <p class="ctx">Agent IA qui exécute des actions sur un site web à partir d'une demande en langage naturel.</p>
+      <div class="label">Rôle</div>
+      <div>      <div>Ingénieure IA R&amp;D impliquée de l'état de l'art jusqu'à la conception et au développement de l'agent.</div>
+      <div class="label">Tâches effectuées</div>
+      <ul>
+        <li>État de l'art des agents web et des assistants vocaux d'accessibilité : analyse d'articles scientifiques et d'outils existants pour définir l'approche.</li>
+        <li>Recueil des besoins auprès d'utilisateurs malvoyants lors d'un atelier, pour cadrer les cas d'usage de l'agent.</li>
+        <li>Conception d'un agent capable de transformer une demande en langage naturel en plan d'actions exécutable sur un site web.</li>
+        <li>Benchmark de 4 LLM open source déployés en local via Ollama pour la planification d'actions, avec sélection de Mistral 7B.</li>
+        <li>Extraction des éléments interactifs des pages web en comparant une approche statique (BeautifulSoup) et dynamique (Playwright).</li>
+        <li>Évaluation de la compréhension des demandes par l'agent sur un jeu de requêtes reformulées en langage naturel.</li>
+        <li>Conception de l'architecture multi-agents (orchestration Flowise) et premiers développements de l'automatisation du navigateur avec Playwright.</li>
+        <li>Prototype d'interface vocale bidirectionnelle (reconnaissance et synthèse vocale) pour une navigation sans écran.</li>
+      </ul>
+      <div class="label">Stack technique</div>
+      <div class="stack">
+        <span class="tag">Python</span><span class="tag">Mistral 7B</span><span class="tag">LLaMA 3</span><span class="tag">Gemma 2B</span><span class="tag">Ollama</span><span class="tag">Prompt Engineering</span><span class="tag">Playwright</span><span class="tag">BeautifulSoup</span><span class="tag">Flowise</span><span class="tag">SpeechRecognition</span><span class="tag">pyttsx3</span>
+      </div>
+    </div>
+
+    <div class="projet" id="aiccessibility">
+      <h4>Projet : AIccessibility, outil d'audit IA des images de sites web</h4>
+      <span class="iatags"><span class="iatag">Computer Vision</span><span class="iatag">Vision-langage</span><span class="iatag">OCR</span></span>
+      <p class="ctx">Outil qui classe les images d'un site (porteuses d'information ou décoratives) et contrôle leurs textes alternatifs selon le référentiel RGAA.</p>
+      <div class="label">Rôle</div>
+      <div>Ingénieure IA chargée de la classification d'images et de l'évaluation des briques OCR et vision-langage.</div>
+      <div class="label">Tâches effectuées</div>
+      <ul>
+        <li>Analyse du pipeline d'audit (scraping, classification, OCR, génération de descriptions, similarité textuelle) pour cibler les briques à améliorer.</li>
+        <li>Fine-tuning de YOLOv8 par transfer learning pour classer automatiquement les images web en 5 catégories (logo, pictogramme, diagramme, texte, illustration), F-mesure de 0,94.</li>
+        <li>Benchmark EasyOCR et Tesseract sur des images web réelles : précision, robustesse au bruit et au contraste, erreurs de segmentation. EasyOCR retenu pour les images hétérogènes.</li>
+        <li>Évaluation des modèles vision-langage LLaVA 7B et Florence-2 sur 3 critères : pertinence, précision factuelle, richesse descriptive.</li>
+        <li>Mise en évidence des hallucinations de LLaVA 7B et recommandation d'une approche hybride combinant richesse descriptive et fiabilité.</li>
+      </ul>
+      <div class="label">Stack technique</div>
+      <div class="stack">
+        <span class="tag">Python</span><span class="tag">PyTorch</span><span class="tag">YOLOv8</span><span class="tag">Transfer Learning</span><span class="tag">EasyOCR</span><span class="tag">Tesseract</span><span class="tag">LLaVA 7B</span><span class="tag">Florence-2</span><span class="tag">Agile Scrum</span>
+      </div>
+    </div>
+  </article>
+
+  <!-- AYMING -->
+  <article class="exp" id="ayming">
+    <div class="exp-head">
+      <div>
+        <h3>Ingénieure IA Générative</h3>
+        <div class="entreprise">AYMING France (cabinet de conseil)</div>
+      </div>
+      <div class="dates">06/2024 – 12/2024<br><span class="lieu">Levallois-Perret, France</span></div>
+    </div>
+
+
+    <div class="projet">
+      <h4>Projet : Ayming AI Extract <span class="badge">Aujourd'hui en production</span></h4>
+      <span class="iatags"><span class="iatag">IA générative</span><span class="iatag">LLM</span><span class="iatag">OCR</span></span>
+      <p class="ctx">Les consultants extrayaient manuellement les données de leurs documents (factures, notes de frais, fiches de paie, CV, contrats). Les outils testés auparavant posaient des problèmes de sécurité et de coût. L'application permet de poser des questions sur un lot de PDF et d'obtenir des réponses structurées.</p>
+      <div class="label">Rôle</div>
+      <div>Ingénieure IA responsable de la conception et du développement de l'application, du pipeline IA jusqu'à l'interface.</div>
+      <div class="label">Tâches effectuées</div>
+            <ul>
+        <li>Analyse du besoin métier et des limites des solutions existantes pour concevoir une solution interne sécurisée.</li>
+        <li>Benchmark de méthodes d'extraction PDF (Unstructured, PDFPlumber, Tabula, Camelot) sur des documents numériques et scannés.</li>
+        <li>Conception d'un pipeline d'extraction combinant conversion en images et OCR Tesseract, robuste sur les scans et les tableaux.</li>
+        <li>Comparaison de plusieurs LLM (GPT-4, Claude 3, Mistral, Llama) via Amazon Bedrock sur la qualité des réponses générées.</li>
+        <li>Intégration de Claude 3 via AWS Bedrock pour répondre aux questions des utilisateurs avec des réponses structurées.</li>
+        <li>Développement de l'API back-end avec FastAPI et stockage des documents et des extractions sur AWS (S3, DynamoDB).</li>
+        <li>Développement de l'interface web en React, Next.js et TypeScript.</li>
+      </ul>
+      <div class="label">Stack technique</div>
+      <div class="stack">
+        <span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">Swagger</span><span class="tag">AWS Bedrock</span><span class="tag">Converse API</span><span class="tag">Amazon S3</span><span class="tag">DynamoDB</span><span class="tag">Claude 3</span><span class="tag">GPT-4</span><span class="tag">Mistral</span><span class="tag">Llama</span><span class="tag">Tesseract OCR</span><span class="tag">pdf2image</span><span class="tag">React</span><span class="tag">Next.js</span><span class="tag">TypeScript</span><span class="tag">Figma</span><span class="tag">UML</span>
+      </div>
+    </div>
+  </article>
+
+  <!-- ENVAST -->
+  <article class="exp" id="envast">
+    <div class="exp-head">
+      <div>
+        <h3>Développeuse Back-end Python</h3>
+        <div class="entreprise">ENVAST (agence digitale et IA)</div>
+      </div>
+      <div class="dates">06/2022 – 07/2023<br><span class="lieu">Sousse, Tunisie</span></div>
+    </div>
+
+    <div class="projet" id="envast-histopathologie">
+      <h4>Projet : Détection d'anomalies sur images histopathologiques (cancer)</h4>
+      <span class="iatags"><span class="iatag">Computer Vision</span><span class="iatag">Deep Learning</span><span class="iatag">IA santé</span></span>
+      <p class="ctx">Les images histopathologiques sont des images au microscope de tissus prélevés sur des patients. L'objectif était de les classer automatiquement pour aider au repérage d'anomalies liées au cancer. Principale difficulté : chaque laboratoire colore les tissus différemment, ce qui perturbe les modèles.</p>
+      <div class="label">Rôle</div>
+      <div>Développeuse chargée de la préparation des images et de l'entraînement des modèles de classification.</div>
+      <div class="label">Tâches effectuées</div>
+           <ul>
+        <li>Normalisation de la coloration des images avec deux méthodes (Macenko et StainNet) pour réduire la variabilité entre laboratoires et rendre le modèle plus robuste.</li>
+        <li>Fine-tuning par transfer learning et comparaison de 4 CNN pré-entraînés (EfficientNetB3, Inception-ResNetV2, MobileNet, VGG16) pour la classification d'images médicales.</li>
+        <li>Mise en place d'un protocole d'évaluation (métriques dédiées, analyse des erreurs) pour choisir le modèle final et fiabiliser la détection.</li>
+      </ul>
+      <div class="label">Stack technique</div>
+      <div class="stack"><span class="tag">Python</span><span class="tag">TensorFlow</span><span class="tag">Keras</span><span class="tag">CNN</span><span class="tag">Transfer Learning</span><span class="tag">StainNet</span><span class="tag">Macenko</span></div>
+    </div>
+
+    <div class="projet" id="envast-pipeline">
+      <h4>Projet : Pipeline automatisé de collecte, de contrôle et de chargement des données (ETL)</h4>
+      <span class="iatags"><span class="iatag">Automatisation</span><span class="iatag">Data Engineering</span></span>
+      <p class="ctx">Dans les projets développés pour les clients, une partie des données était collectée, vérifiée et mise en forme à la main, ce qui prenait du temps et provoquait des erreurs. L'objectif était de remplacer ces traitements manuels par un pipeline Python fiable, réutilisable et facile à maintenir, alimentant une base PostgreSQL.</p>
+      <div class="label">Rôle</div>
+      <div>Développeuse back-end chargée de concevoir, développer et maintenir le pipeline de données, de la collecte jusqu'au chargement en base.</div>
+      <div class="label">Tâches effectuées</div>
+      <ul>
+        <li>Analyse des traitements manuels existants pour identifier les étapes répétitives à automatiser.</li>
+        <li>Développement de scripts Python de collecte des données à partir de différentes sources.</li>
+        <li>Mise en place de contrôles qualité automatiques : champs manquants, doublons, formats incorrects, valeurs incohérentes.</li>
+        <li>Nettoyage et transformation des données (mise au bon format, harmonisation des valeurs) avant leur exploitation.</li>
+        <li>Chargement dans PostgreSQL : requêtes SQL d'insertion et de mise à jour, vérification de la cohérence entre tables.</li>
+        <li>Requêtes SQL d'extraction et analyses en SQL et Python pour fournir aux équipes les données dont elles avaient besoin.</li>
+        <li>Organisation du code en fonctions réutilisables pour faciliter la maintenance et l'ajout de nouveaux traitements.</li>
+        <li>Tests des scripts et des requêtes, correction de bugs et versionnement avec Git/GitLab au sein de l'équipe.</li>
+      </ul>
+      <div class="label">Stack technique</div>
+      <div class="stack"><span class="tag">Python</span><span class="tag">PostgreSQL</span><span class="tag">ETL</span><span class="tag">Qualité des données</span><span class="tag">Tests</span><span class="tag">Git/GitLab</span></div>
+    </div>
+  </article>
+
+  <!-- PROJETS -->
+  <section id="projets">
+    <h2>Projets IA &amp; Data Science</h2>
+    <div class="grille">
+      <div class="carte carte-large" id="repo-rag">
+        <h4>Repo-RAG Assistant : assistant IA pour comprendre un dépôt GitHub</h4>
+        <span class="iatags"><span class="iatag">RAG</span><span class="iatag">IA générative</span><span class="iatag">LLM</span></span>
+        <div class="meta">09/2026 – aujourd'hui</div>
+        <p class="ctx-rag">Découvrir un dépôt de code inconnu prend du temps : il faut parcourir des dizaines de fichiers pour comprendre où et comment une fonctionnalité est implémentée. Repo-RAG permet de poser des questions en langage naturel sur un dépôt GitHub et répond en citant les fichiers sources utilisés.</p>
+        <div class="label">Réalisations</div>
+        <ul>
+          <li>Conception de bout en bout d'un pipeline RAG (Retrieval-Augmented Generation), de l'ingestion des données jusqu'à la réponse.</li>
+          <li>Ingestion d'un dépôt GitHub : récupération du code source et de la documentation.</li>
+          <li>Découpage des fichiers en segments (chunks) adaptés à la recherche.</li>
+          <li>Génération d'embeddings vectoriels et indexation dans la base vectorielle Qdrant.</li>
+          <li>Recherche sémantique des passages les plus pertinents pour chaque question.</li>
+          <li>Génération de la réponse par un LLM à partir des passages retrouvés, avec citation des fichiers sources pour limiter les hallucinations.</li>
+          <li>Exposition du service via une API REST avec FastAPI.</li>
+          <li>Conteneurisation avec Docker en cours pour un déploiement reproductible.</li>
+        </ul>
+        <div class="label">Stack technique</div>
+        <div class="stack"><span class="tag">Python</span><span class="tag">RAG</span><span class="tag">LLM</span><span class="tag">Embeddings</span><span class="tag">Qdrant</span><span class="tag">Recherche sémantique</span><span class="tag">FastAPI</span><span class="tag">Docker</span></div>
+      </div>
+      <div class="carte carte-large" id="segmentation-retinienne">
+        <h4>Segmentation des vaisseaux rétiniens</h4>
+        <span class="iatags"><span class="iatag">Computer Vision</span><span class="iatag">Deep Learning</span></span>
+        <p style="margin:0 0 8px">Segmentation automatique des vaisseaux sanguins sur des images du fond de l'œil. Ces vaisseaux aident les médecins à repérer des maladies comme la rétinopathie diabétique ou le glaucome.</p>
+        <ul style="margin:0 0 10px;padding-left:18px">
+          <li>Prétraitement des images (amélioration du contraste, normalisation) pour faire ressortir les vaisseaux fins.</li>
+          <li>Segmentation pixel par pixel avec un réseau de neurones convolutif (CNN) : chaque pixel est classé vaisseau ou fond.</li>
+          <li>Évaluation des masques prédits par rapport aux annotations d'experts avec des métriques de segmentation.</li>
+        </ul>
+        <div class="stack"><span class="tag">CNN</span><span class="tag">TensorFlow</span><span class="tag">Keras</span><span class="tag">Scikit-learn</span></div>
+      </div>
+      <div class="carte">
+        <h4>Détection de fake news</h4>
+        <span class="iatags"><span class="iatag">NLP</span><span class="iatag">LLM</span></span>
+        <p style="margin:0 0 10px">Classification de textes et comparaison de modèles de langage.</p>
+        <div class="stack"><span class="tag">BERT</span><span class="tag">T5</span><span class="tag">RoBERTa</span><span class="tag">Mistral</span></div>
+      </div>
+      <div class="carte">
+        <h4>Analyse de sentiments</h4>
+        <span class="iatags"><span class="iatag">NLP</span><span class="iatag">Deep Learning</span></span>
+        <p style="margin:0 0 10px">Classification de sentiments sur des textes avec un modèle Transformer allégé.</p>
+        <div class="stack"><span class="tag">DistilBERT</span><span class="tag">PyTorch</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPÉTENCES -->
+  <section id="competences">
+    <h2>Compétences techniques</h2>
+    <div class="comp">
+      <div class="carte"><h4>IA générative &amp; LLM</h4><div class="stack"><span class="tag">LLM (GPT-4, Claude, Mistral, LLaMA)</span><span class="tag">RAG</span><span class="tag">Prompt Engineering</span><span class="tag">Embeddings</span><span class="tag">Recherche sémantique</span><span class="tag">AWS Bedrock</span></div></div>
+      <div class="carte"><h4>Agents IA &amp; automatisation</h4><div class="stack"><span class="tag">Agents IA</span><span class="tag">Systèmes multi-agents</span><span class="tag">Flowise</span><span class="tag">LangChain</span><span class="tag">Ollama</span><span class="tag">Playwright</span></div></div>
+      <div class="carte"><h4>Computer Vision</h4><div class="stack"><span class="tag">YOLOv8</span><span class="tag">CNN (EfficientNet, VGG16, MobileNet)</span><span class="tag">Vision-langage (LLaVA, Florence-2)</span><span class="tag">OCR (Tesseract, EasyOCR)</span><span class="tag">Segmentation d'images</span></div></div>
+      <div class="carte"><h4>NLP</h4><div class="stack"><span class="tag">BERT</span><span class="tag">DistilBERT</span><span class="tag">RoBERTa</span><span class="tag">T5</span><span class="tag">Classification de texte</span></div></div>
+      <div class="carte"><h4>Machine &amp; Deep Learning</h4><div class="stack"><span class="tag">PyTorch</span><span class="tag">TensorFlow</span><span class="tag">Keras</span><span class="tag">Scikit-learn</span><span class="tag">Transfer Learning</span><span class="tag">Fine-tuning</span><span class="tag">Évaluation de modèles</span></div></div>
+      <div class="carte"><h4>Data &amp; bases de données</h4>
+        <div class="ligne"><div class="sous">Traitement</div><div class="stack"><span class="tag">Pandas</span><span class="tag">NumPy</span><span class="tag">ETL</span></div></div>
+        <div class="ligne"><div class="sous">SQL</div><div class="stack"><span class="tag">PostgreSQL</span><span class="tag">MySQL</span></div></div>
+        <div class="ligne"><div class="sous">NoSQL</div><div class="stack"><span class="tag">MongoDB</span><span class="tag">DynamoDB</span></div></div>
+        <div class="ligne"><div class="sous">Vectorielle</div><div class="stack"><span class="tag">Qdrant</span></div></div>
+        <div class="ligne"><div class="sous">Visualisation</div><div class="stack"><span class="tag">Power BI</span></div></div>
+      </div>
+      <div class="carte"><h4>Développement &amp; API</h4><div class="stack"><span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">Swagger</span><span class="tag">TypeScript</span><span class="tag">React</span><span class="tag">Next.js</span></div></div>
+      <div class="carte"><h4>Cloud, outils &amp; méthodes</h4><div class="stack"><span class="tag">AWS (Bedrock, S3, DynamoDB)</span><span class="tag">Docker</span><span class="tag">Git (GitHub, GitLab, Azure DevOps)</span><span class="tag">Linux</span><span class="tag">Agile Scrum</span><span class="tag">UML</span><span class="tag">Figma</span></div></div>
+    </div>
+  </section>
+
+  <!-- FORMATION -->
+  <section id="formation">
+    <h2>Formation</h2>
+    <div class="form-item"><div><b>Master de Recherche Data Science &amp; Machine Learning</b><br><span class="lieu">ENSEA, CY Cergy Paris Université</span></div><b>2024 – 2026</b></div>
+    <div class="form-item"><div><b>Diplôme d'ingénieur en Génie Informatique, spécialité IA</b><br><span class="lieu">École Polytechnique de Sousse (Tunisie) &amp; CY Tech, CY Cergy Paris Université</span></div><b>2019 – 2024</b></div>
+    <div class="form-item"><div><b>Licence Éducation et Enseignement</b><br><span class="lieu">ISEAH Mahdia, Tunisie</span></div><b>2016 – 2019</b></div>
+  </section>
+
+  <!-- LANGUES -->
+  <section id="langues">
+    <h2>Langues</h2>
+    <div class="form-item"><b>Français</b><span class="lieu">Bilingue</span></div>
+    <div class="form-item"><b>Anglais</b><span class="lieu">Professionnel</span></div>
+    <div class="form-item"><b>Allemand</b><span class="lieu">Débutant</span></div>
+  </section>
+
+</main>
+
+<footer>
+  Nourhene HAMDENE · Dossier de compétences · Mis à jour en octobre 2026
+</footer>
+
+<a class="haut" href="#" aria-label="Revenir en haut">↑</a>
+
+</body>
+</html>
